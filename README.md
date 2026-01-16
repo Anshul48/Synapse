@@ -1,113 +1,160 @@
 # Synapse v3.0 🧠
 
-## The Living Knowledge Graph for Obsidian.md
+**The Living Knowledge Graph for Obsidian.md**
 
-Synapse is a hybrid system that turns your Obsidian Vault into an intelligent, self-organizing library. It runs a local Python "Sidecar" alongside your vault that watches for new thoughts, restructures them into a tree-based hierarchy, and learns from your feedback.
+Synapse is a hybrid system that turns your Obsidian Vault into an intelligent, self-organizing library. It runs a local Python **Sidecar** alongside your vault that watches for new thoughts, restructures them into a tree-based hierarchy, and continuously learns from your feedback.
 
-🚀 Quick Start
+---
 
-1. Prerequisites
+## 🚀 Quick Start
 
-Python 3.9+
+### 1. Prerequisites
 
-Obsidian.md installed.
+* **Python** 3.9+
+* **Obsidian.md** installed
+* **LLM Provider**:
 
-An LLM Provider:
+  * Local: **Ollama** (recommended for privacy)
+  * Cloud: **DeepSeek API** or **OpenAI** (configured via environment variables)
 
-Local: Ollama (Recommended for privacy).
+---
 
-Cloud: DeepSeek API or OpenAI (via config).
+### 2. Installation
 
-2. Installation
-
+```bash
 # Clone the repository
-git clone [https://github.com/your-repo/synapse.git](https://github.com/your-repo/synapse.git)
+git clone https://github.com/your-repo/synapse.git
 cd synapse
 
 # Install dependencies
 pip install -r requirements.txt
 
-# Set up environment (Optional, for API keys)
+# Set up environment variables (optional, for API keys)
 cp .env.example .env
+```
 
+---
 
+### 3. Ignition
 
-3. Ignition
+You must run **two processes**, ideally in separate terminal tabs.
 
-You need to run two processes (ideally in separate terminal tabs):
+#### Terminal 1: The Librarian (Background Service)
 
-Terminal 1: The Librarian (Background Service)
-This script watches your Inbox and processes files instantly.
+Watches your Inbox and processes files in real time.
 
-python src/librarian.py
+```bash
+python -m src.librarian
+```
 
+#### Terminal 2: The Dashboard (GUI)
 
+Launches the Streamlit interface for planning and configuration.
 
-Terminal 2: The Dashboard (GUI)
-This opens the Streamlit interface for planning and configuration.
+```bash
+python -m streamlit run src/main.py
+```
 
-streamlit run src/main.py
+---
 
+## 📖 How It Works
 
+### The Workflow
 
-📖 How It Works
+1. **Capture**
+   Create a new note in `Vault/Inbox/` (for example, `Monday_Thoughts.md`).
+   Dump raw ideas, meeting notes, or free-form thoughts.
 
-The Workflow
+2. **Process**
+   The Librarian detects the file and invokes the LLM **Surgeon**, which:
 
-Capture: Create a new note in Vault/Inbox/ (e.g., Monday_Thoughts.md). Dump raw text, meeting notes, or ideas there.
+   * Splits content into atomic concepts
+   * Routes them to the correct Thread (for example, `T. Physics`)
+   * Weaves them into the Thread’s semantic tree as:
 
-Process: The Librarian detects the file, reads it, and uses the LLM "Surgeon" to:
+     * a new chapter, or
+     * a seamless paragraph-level insertion
 
-Split it into atomic concepts.
+3. **Read & Edit**
+   Open `Vault/Threads/` in Obsidian.
+   You will see cohesive manuscripts such as `T. Physics.md`.
 
-Route it to the correct Thread (e.g., T. Physics).
+   You can freely:
 
-Weave it into the Thread's tree structure (as a new chapter or a seamless paragraph update).
+   * Fix typos
+   * Add or rewrite paragraphs
+   * Check off tasks
+   * Restructure content manually
 
-Read & Edit: Open Vault/Threads/ in Obsidian. You will see a cohesive "Manuscript" (e.g., T. Physics.md).
+4. **Sync**
+   Changes automatically propagate to the underlying files in `Vault/Atoms/`.
 
-Edit freely: Fix typos, add paragraphs, or check off tasks in the Thread.
+---
 
-Sync: The system automatically updates the underlying files in Vault/Atoms/.
+## 🌳 New in v3.0: The Living Tree
 
-New in v3.0: The "Living Tree"
+Unlike earlier versions that only generated flat lists of links, **v3.0 builds semantic trees**.
 
-Unlike previous versions that just made lists of links, v3.0 builds Semantic Trees.
+* **Context-Aware Insertion**
+  New notes are inserted where they belong, not merely appended.
 
-Context Aware: New notes aren't just appended; they are inserted where they belong (e.g., adding a sentence to an existing paragraph).
+* **Seamless Mode**
+  Concepts can be rendered without headers for uninterrupted reading.
 
-Seamless Mode: Concepts can be rendered without headers for a smoother reading experience.
+* **Memory**
+  If you delete a generated Thread, Synapse learns not to recreate it.
 
-Memory: If you delete a generated Thread, the Brain learns not to recreate it.
+---
 
-📂 System Architecture
+## 📂 System Architecture
 
-For a comprehensive breakdown of the internal logic, directory structure, and data schemas, please refer to:
+For a detailed breakdown of the internal logic, directory structure, and data schemas, see:
 
-👉 System_Architecture.md 👈
+👉 **System_Architecture.md** 👈
 
-Key topics covered there:
+### Key Topics Covered
 
-The "Sidecar" Protocol: How Python interacts with Obsidian via File I/O.
+* **The Sidecar Protocol**
+  How Python interacts with Obsidian using file-based I/O.
 
-The Manifest: How data/manifests/*.json stores the tree structure.
+* **The Manifest**
+  How `data/manifests/*.json` stores and maintains the tree structure.
 
-The Contracts: Strict data typing for Atoms and Threads.
+* **The Contracts**
+  Strict data typing rules for Atoms and Threads.
 
-The Learning Loop: How src/learning.py prevents repetitive mistakes.
+* **The Learning Loop**
+  How `src/learning.py` prevents repetitive structural mistakes.
 
-🛠 Configuration
+---
 
-You can adjust settings via the Dashboard (src/main.py) or by editing config.yaml directly.
+## 🛠 Configuration
 
-LLM Provider: Switch between Ollama (Local) and DeepSeek/OpenAI.
+Configuration can be adjusted either through the Dashboard (`src/main.py`) or directly via `config.yaml`.
 
-Prompts: Customize how the "Surgeon" splits your notes.
+Available options include:
 
-Tags: Define default tags for new Atoms.
+* **LLM Provider**
+  Switch between Ollama (local) and DeepSeek/OpenAI (cloud).
 
-🐛 Troubleshooting
+* **Prompts**
+  Customize how the Surgeon splits and restructures notes.
 
-Logs: Check logs/system.log for detailed activity reports.
+* **Tags**
+  Define default tags applied to newly generated Atoms.
 
-Ghosts: If a Thread keeps reappearing despite being deleted, ensure src/learning.py is active (it handles the "Forgetfulness" protocol).
+---
+
+## 🐛 Troubleshooting
+
+* **Logs**
+  Inspect `logs/system.log` for detailed activity and error reports.
+
+* **Ghost Threads**
+  If a deleted Thread keeps reappearing, ensure `src/learning.py` is active.
+  It implements the **Forgetfulness Protocol**, which prevents regeneration of explicitly removed structures.
+
+---
+
+**Synapse v3.0** is not a note-taking plugin.
+It is a continuously learning knowledge organism built on top of your vault.
