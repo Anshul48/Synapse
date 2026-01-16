@@ -1,0 +1,163 @@
+{
+  "thread_id": "T. Physics Concepts",
+  "title": "Physics Concepts",
+  "nodes": [
+    {
+      "atom_id": "Light_Reflection_and_Refraction.md",
+      "title": "Light Reflection and Refraction",
+      "level": 2,
+      "children": []
+    },
+    {
+      "atom_id": "Reflection_by_Curved_Surfaces.md",
+      "title": "Reflection by Curved Surfaces",
+      "level": 2,
+      "children": []
+    },
+    {
+      "atom_id": "Refraction_of_Light.md",
+      "title": "Refraction of Light",
+      "level": 2,
+      "children": []
+    },
+    {
+      "atom_id": "Image_Formation.md",
+      "title": "Image Formation",
+      "level": 2,
+      "children": []
+    },
+    {
+      "atom_id": "Refraction_Through_Prism.md",
+      "title": "Refraction Through Prism",
+      "level": 2,
+      "children": []
+    },
+    {
+      "atom_id": "Human_Eye_Structure.md",
+      "title": "Human Eye Structure",
+      "level": 2,
+      "children": []
+    },
+    {
+      "atom_id": "Eye_Defects_and_Correction.md",
+      "title": "Eye Defects and Correction",
+      "level": 2,
+      "children": []
+    },
+    {
+      "atom_id": "Electricity_Effects.md",
+      "title": "Electricity Effects",
+      "level": 2,
+      "children": []
+    },
+    {
+      "atom_id": "Electric_Current_Basics.md",
+      "title": "Electric Current Basics",
+      "level": 2,
+      "children": []
+    },
+    {
+      "atom_id": "Ohms_Law.md",
+      "title": "Ohm's Law",
+      "level": 2,
+      "children": []
+    },
+    {
+      "atom_id": "Electrical_Resistance.md",
+      "title": "Electrical Resistance",
+      "level": 2,
+      "children": []
+    },
+    {
+      "atom_id": "Heating_Effect_of_Current.md",
+      "title": "Heating Effect of Current",
+      "level": 2,
+      "children": []
+    },
+    {
+      "atom_id": "Magnetic_Effects_of_Current.md",
+      "title": "Magnetic Effects of Current",
+      "level": 2,
+      "children": []
+    },
+    {
+      "atom_id": "Magnetic_Fields_from_Current.md",
+      "title": "Magnetic Fields from Current",
+      "level": 2,
+      "children": []
+    },
+    {
+      "atom_id": "Force_on_Current_Carriers.md",
+      "title": "Force on Current Carriers",
+      "level": 2,
+      "children": []
+    },
+    {
+      "atom_id": "Electric_Motors.md",
+      "title": "Electric Motors",
+      "level": 2,
+      "children": []
+    },
+    {
+      "atom_id": "Electromagnetic_Induction.md",
+      "title": "Electromagnetic Induction",
+      "level": 2,
+      "children": []
+    },
+    {
+      "atom_id": "Electric_Generators.md",
+      "title": "Electric Generators",
+      "level": 2,
+      "children": []
+    },
+    {
+      "atom_id": "Energy_Sources.md",
+      "title": "Energy Sources",
+      "level": 2,
+      "children": []
+    },
+    {
+      "atom_id": "Renewable_vs_Non-renewable.md",
+      "title": "Renewable vs Non-renewable",
+      "level": 2,
+      "children": []
+    },
+    {
+      "atom_id": "Environmental_Impact.md",
+      "title": "Environmental Impact",
+      "level": 2,
+      "children": []
+    },
+    {
+      "atom_id": "Physics_Experiments.md",
+      "title": "Physics Experiments",
+      "level": 2,
+      "children": []
+    },
+    {
+      "atom_id": "Focal_Length_Measurement.md",
+      "title": "Focal Length Measurement",
+      "level": 2,
+      "children": []
+    },
+    {
+      "atom_id": "Light_Tracing_Experiments.md",
+      "title": "Light Tracing Experiments",
+      "level": 2,
+      "children": []
+    },
+    {
+      "atom_id": "Resistance_Experiments.md",
+      "title": "Resistance Experiments",
+      "level": 2,
+      "children": []
+    },
+    {
+      "atom_id": "Ohms_Law_Verification.md",
+      "title": "Ohm's Law Verification",
+      "level": 2,
+      "children": []
+    }
+  ],
+  "last_updated": "2026-01-16 21:39:39"
+}

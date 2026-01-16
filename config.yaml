@@ -1,0 +1,6 @@
+deepseek_api_key: sk-16d17bc51bb1407d9606a9958bb67feb
+deepseek_model: deepseek-chat
+llm_provider: deepseek
+ollama_base_url: http://localhost:11434/v1
+ollama_model: llama3
+scan_interval: 10

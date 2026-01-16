@@ -1,0 +1,67 @@
+{
+  "thread_id": "T. Knowledge Management Systems",
+  "title": "Knowledge Management Systems",
+  "nodes": [
+    {
+      "atom_id": "Obsidian_Brain_System.md",
+      "title": "Obsidian Brain System",
+      "level": 2,
+      "children": []
+    },
+    {
+      "atom_id": "Sidecar_Architecture.md",
+      "title": "Sidecar Architecture",
+      "level": 2,
+      "children": []
+    },
+    {
+      "atom_id": "Weave_and_Unweave_Protocol.md",
+      "title": "Weave and Unweave Protocol",
+      "level": 2,
+      "children": []
+    },
+    {
+      "atom_id": "Directory_Structure.md",
+      "title": "Directory Structure",
+      "level": 2,
+      "children": []
+    },
+    {
+      "atom_id": "Librarian_Component.md",
+      "title": "Librarian Component",
+      "level": 2,
+      "children": []
+    },
+    {
+      "atom_id": "Weaver_Component.md",
+      "title": "Weaver Component",
+      "level": 2,
+      "children": []
+    },
+    {
+      "atom_id": "Scheduler_Component.md",
+      "title": "Scheduler Component",
+      "level": 2,
+      "children": []
+    },
+    {
+      "atom_id": "User_Interfaces.md",
+      "title": "User Interfaces",
+      "level": 2,
+      "children": []
+    },
+    {
+      "atom_id": "Brain_Dump_Workflow.md",
+      "title": "Brain Dump Workflow",
+      "level": 2,
+      "children": []
+    },
+    {
+      "atom_id": "Project_Planning_Workflow.md",
+      "title": "Project Planning Workflow",
+      "level": 2,
+      "children": []
+    }
+  ],
+  "last_updated": "2026-01-16 21:39:39"
+}
