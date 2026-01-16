@@ -1,12 +1,12 @@
-# Obsidian Brain v3.0
+# Synapse v3.0
 
 ## System Architecture & Directory Reference
 
-This document is the canonical map of **Obsidian Brain v3.0**. It describes how the user-facing **Vault** interacts with the backend **Logic Core**, and how raw text is transformed into a structured, learning knowledge graph.
+This document is the canonical map of **Synapse v3.0**. It describes how the user-facing **Vault** interacts with the backend **Logic Core**, and how raw text is transformed into a structured, learning knowledge graph.
 
 ---
 
-## 1. Root Directory: `Obsidian_Brain/`
+## 1. Root Directory: `Synapse/`
 
 **Role:** System Container
 
@@ -315,5 +315,5 @@ based on meaning rather than keywords.
 
 ---
 
-**Obsidian Brain v3.0** is not a folder structure.
+**Synapse v3.0** is not a folder structure.
 It is a cognitive architecture expressed through files.
